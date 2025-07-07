@@ -58,7 +58,7 @@ const NavBar = () => {
         <div className="cart-user d-flex gap-4 align-items-center">
           {firstname && lastname != null ? (
             <>
-              <div className="d-flex gap-4 align-items-center">
+              <div className="d-flex gap-4 align-items-center mb-3">
                 <BsPersonCircle className=" text-white fs-4" />
                 <p className="mb-0 text-white me-sm-0 me-4">
                   {firstname.toUpperCase()}
@@ -70,12 +70,12 @@ const NavBar = () => {
           ) : (
             <>
               <Link to="/sign-up">
-                <button className="sign-up px-sm-4 px-2 py-1 py-sm-2 rounded-2 border-1 border-white text-white bg-transparent">
+                <button className="sign-up px-sm-4 px-2 py-1 py-sm-2 rounded-2 border-1 border-white text-white bg-transparent mb-3">
                   Sign up
                 </button>
               </Link>
               <Link to="/sign-in">
-                <button className="login-btn border-0 px-sm-4 px-2 py-1 py-sm-2 rounded-2 text-white">
+                <button className="login-btn border-0 px-sm-4 px-2 py-1 py-sm-2 rounded-2 text-white mb-3">
                   Login
                 </button>
               </Link>

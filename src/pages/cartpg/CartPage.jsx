@@ -39,9 +39,6 @@ const CartPage = () => {
                   className="trash position-absolute bg-dark-subtle border-0 rounded-circle overflow-visible"
                   onClick={() => {
                     onRemove(cartItem);
-                    alert(
-                      confirm("Click OK button to delete property from cart.")
-                    );
                     priceOnDelete(cartItem);
                     toast.success("Successfully removed property from cart.");
                   }}
