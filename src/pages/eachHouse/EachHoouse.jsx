@@ -1,7 +1,6 @@
-import main from "../../utils/Discover the charm and convenience of prefab homes….jpeg";
 import demoI from "../../utils/b-11.jpg (4).svg";
 import demoII from "../../utils/b-11.jpg (8).svg";
-import demoIV from "../../utils/b-11.jpg (2).svg";
+import demoIV from "../../utils/extra/15 Ideas for a Minimalist Interior Design at Home.jpg";
 import shows from "../../showapi.js";
 import "./EachHouse.css";
 import { useContext, useState } from "react";
