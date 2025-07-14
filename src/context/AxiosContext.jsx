@@ -6,7 +6,7 @@ export const ApiContext = createContext(null);
 export function ApiProvider({ children }) {
   // Create one axios instance for the entire app
   const api = axios.create({
-    baseURL: "https://betahousebackend2.onrender.com/api/v1/auth",
+    baseURL: "https://betahouseserver.onrender.com/api/v1/auth",
     headers: {
       "Content-Type": "application/json",
     },
