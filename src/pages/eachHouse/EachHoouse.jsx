@@ -144,7 +144,6 @@ const EachHoouse = () => {
                 if (user == undefined && disable === false) {
                   alert(`User not logged in`);
                 }
-                alert(Number(price.replace(",", "")));
                 handleCheckout(100, `${params.id.slice(1)}`);
               }}
             >
