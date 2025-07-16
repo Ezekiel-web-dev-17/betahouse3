@@ -6,8 +6,31 @@ import { BsTrash3Fill } from "react-icons/bs";
 import { GrShop } from "react-icons/gr";
 import { useState } from "react";
 import { useEffect } from "react";
-
 import { toast } from "react-toastify";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+// import { ApiContext } from "../../context/AxiosContext";
+
+const stripePromise = loadStripe(
+  "pk_test_51RTj9VFjZLLpDs8KHnN2JNxXRcyynMZea3Q6qpxo0ULZkXlFiVcnGKv2ss2SAaYOwyxfOSKJJ4BKXkeB295UuatF006kqUV2ZP"
+); // Your publishable key
+// const  api = useContext(ApiContext)
+const handleCheckout = async (amount, propertyId) => {
+  const stripe = await stripePromise;
+
+  const res = await axios.post(
+    "http://localhost:4000/api/v1/checkout/create-checkout-session",
+    {
+      amount,
+      propertyId,
+    }
+  );
+
+  console.log("res: ", res);
+  console.log("res.data: ", res.data);
+  const session = res.data;
+  await stripe.redirectToCheckout({ sessionId: session.id });
+};
 
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
@@ -75,14 +98,15 @@ const CartPage = () => {
             <label className=" fs-5 fw-bold">Subtotal: </label>
             <h5 className=" fw-semibold mb-0">₦{numToString(subTotal)}</h5>
           </div>
-          <Link to="/checkout">
-            <button
-              className="make py-1 px-4 bg-success text-white mt-3 fs-5 fw-bold rounded-3 border-0"
-              style={{ textWrap: "nowrap" }}
-            >
-              Make Purchase Of All.
-            </button>
-          </Link>
+          {/* <Link to="/checkout"> */}
+          <button
+            className="make py-1 px-4 bg-success text-white mt-3 fs-5 fw-bold rounded-3 border-0"
+            style={{ textWrap: "nowrap" }}
+            onClick={() => handleCheckout(10, "1")}
+          >
+            Make Purchase Of All.
+          </button>
+          {/* </Link> */}
         </div>
       ) : (
         <div className="empty fw-semibold mt-5 ">
