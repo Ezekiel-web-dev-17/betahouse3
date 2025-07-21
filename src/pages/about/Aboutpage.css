@@ -3,6 +3,18 @@
   color: #3d9970;
 }
 
+.about-us img {
+  max-height: 500px;
+}
+
+.last-three {
+  left: -0.8%;
+}
+
+.last-three img {
+  max-height: 400px;
+}
+
 .min-img {
   display: flex;
 }
@@ -17,6 +29,11 @@
   .about-us ul {
     font-size: 0.8em;
   }
+
+  .last-three {
+    left: 10%;
+  }
+
   .min-img {
     display: none;
   }

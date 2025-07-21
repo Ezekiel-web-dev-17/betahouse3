@@ -1,6 +1,3 @@
-import demoI from "../../utils/extra/kitchen14.jpg";
-import demoII from "../../utils/extra/bedroom13.jpg";
-import demoIV from "../../utils/extra/bathroom14.jpg";
 import shows from "../../showapi.js";
 import "./EachHouse.css";
 import { useContext, useState } from "react";
@@ -9,11 +6,13 @@ import { AppContext } from "../../context/StateContext";
 
 const EachHoouse = () => {
   const params = useParams();
-  const { image, whatFor, title, location, bed, bath, price } = shows.find(
-    (item) => item.id == params.id.slice(1)
-  );
+  const { image, whatFor, title, location, bed, bath, price, images } =
+    shows.find((item) => item.id == params.id.slice(1));
   const [mainImg, setMainImg] = useState(image);
-  const user = localStorage.getItem("userId");
+  const user = localStorage.getItem("token");
+  let demoI = images[0],
+    demoII = images[1],
+    demoIV = images[2];
   const imgArr = [image, demoI, demoII, demoIV];
   const { addToCart } = useContext(AppContext);
   const [disable, setDisable] = useState(false);
@@ -109,7 +108,9 @@ const EachHoouse = () => {
 
           <Link
             className="w-100"
-            to={user == undefined ? `/house/${params.id}` : "/payment"}
+            to={
+              user == undefined || disable ? `/house/${params.id}` : "/payment"
+            }
           >
             <button
               className=" rounded border-0 fs-6 py-2 fw-bold text-white w-100"
@@ -123,9 +124,6 @@ const EachHoouse = () => {
                 );
                 setDisable(true);
                 addToCart(propertyObj);
-                // if (user == undefined && disable === false) {
-                //   alert(`User not logged in`);
-                // }
               }}
             >
               {whatFor === "Sale" ? "Buy Property Now." : "Rent Property Now."}

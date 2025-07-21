@@ -25,6 +25,11 @@ const shows = [
     bath: 3,
     price: "3,340,000",
     amount: 3340000,
+    images: [
+      "../src/utils/extra/kitchen1.jpg",
+      "../src/utils/extra/bedroom1.jpg",
+      "../src/utils/extra/bathroom1.jpg",
+    ],
   },
   {
     id: 2,
@@ -36,6 +41,11 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
+    images: [
+      "../src/utils/extra/kitchen2.jpg",
+      "../src/utils/extra/bedroom2.jpg",
+      "../src/utils/extra/bathroom2.jpg",
+    ],
   },
   {
     id: 3,
@@ -47,6 +57,11 @@ const shows = [
     bath: 3,
     price: "5,350,000",
     amount: 5350000,
+    images: [
+      "../src/utils/extra/kitchen3.jpg",
+      "../src/utils/extra/bedroom3.jpg",
+      "../src/utils/extra/bathroom3.jpg",
+    ],
   },
   {
     id: 4,
@@ -58,6 +73,11 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
+    images: [
+      "../src/utils/extra/kitchen4.jpg",
+      "../src/utils/extra/bedroom4.jpg",
+      "../src/utils/extra/bathroom4.jpg",
+    ],
   },
   {
     id: 5,
@@ -69,6 +89,11 @@ const shows = [
     bath: 4,
     price: "3,500,000",
     amount: 3500000,
+    images: [
+      "../src/utils/extra/kitchen5.jpg",
+      "../src/utils/extra/bedroom5.jpg",
+      "../src/utils/extra/bathroom5.jpg",
+    ],
   },
   {
     id: 6,
@@ -80,6 +105,11 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
+    images: [
+      "../src/utils/extra/kitchen6.jpg",
+      "../src/utils/extra/bedroom6.jpg",
+      "../src/utils/extra/bathroom6.jpg",
+    ],
   },
   {
     id: 7,
@@ -91,6 +121,11 @@ const shows = [
     bath: 3,
     price: "25,000,000",
     amount: 25000000,
+    images: [
+      "../src/utils/extra/kitchen7.jpg",
+      "../src/utils/extra/bedroom7.jpg",
+      "../src/utils/extra/bathroom7.jpg",
+    ],
   },
   {
     id: 8,
@@ -102,6 +137,11 @@ const shows = [
     bath: 6,
     price: "3,350,000",
     amount: 3350000,
+    images: [
+      "../src/utils/extra/kitchen8.jpg",
+      "../src/utils/extra/bedroom8.jpg",
+      "../src/utils/extra/bathroom8.jpg",
+    ],
   },
   {
     id: 9,
@@ -113,6 +153,11 @@ const shows = [
     bath: 6,
     price: "60,000,000",
     amount: 60000000,
+    images: [
+      "../src/utils/extra/kitchen9.jpg",
+      "../src/utils/extra/bedroom9.jpg",
+      "../src/utils/extra/bathroom9.jpg",
+    ],
   },
   {
     id: 10,
@@ -124,6 +169,11 @@ const shows = [
     bath: 3,
     price: "7,000,000",
     amount: 7000000,
+    images: [
+      "../src/utils/extra/kitchen10.jpg",
+      "../src/utils/extra/bedroom10.jpg",
+      "../src/utils/extra/bathroom10.jpg",
+    ],
   },
   {
     id: 11,
@@ -135,6 +185,11 @@ const shows = [
     bath: 3,
     price: "100,000,000",
     amount: 100000000,
+    images: [
+      "../src/utils/extra/kitchen11.jpg",
+      "../src/utils/extra/bedroom11.jpg",
+      "../src/utils/extra/bathroom11.jpg",
+    ],
   },
   {
     id: 12,
@@ -146,6 +201,11 @@ const shows = [
     bath: 3,
     price: "15,000,000",
     amount: 15000000,
+    images: [
+      "../src/utils/extra/kitchen12.jpg",
+      "../src/utils/extra/bedroom12.jpg",
+      "../src/utils/extra/bathroom12.jpg",
+    ],
   },
   {
     id: 13,
@@ -157,6 +217,11 @@ const shows = [
     bath: 4,
     price: "9,000,000",
     amount: 9000000,
+    images: [
+      "../src/utils/extra/kitchen13.jpg",
+      "../src/utils/extra/bedroom13.jpg",
+      "../src/utils/extra/bathroom13.jpg",
+    ],
   },
   {
     id: 14,
@@ -168,6 +233,11 @@ const shows = [
     bath: 3,
     price: "90,000,000",
     amount: 90000000,
+    images: [
+      "../src/utils/extra/kitchen14.jpg",
+      "../src/utils/extra/bedroom14.jpg",
+      "../src/utils/extra/sitingRoom1.jpg",
+    ],
   },
   {
     id: 15,
@@ -179,6 +249,11 @@ const shows = [
     bath: 3,
     price: "2,380,000",
     amount: 2380000,
+    images: [
+      "../src/utils/extra/bathroom12.jpg",
+      "../src/utils/extra/kitchen14.jpg",
+      "../src/utils/extra/sittingRoom13.jpg.jpg",
+    ],
   },
 ];
 

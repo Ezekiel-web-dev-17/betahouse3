@@ -1,18 +1,18 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Aboutpage.css";
-import about from "../../utils/b-11.jpg (1).svg";
-import about_1 from "../../utils/b-11.jpg (2).svg";
-import about_2 from "../../utils/b-11.jpg (3).svg";
-import about_3 from "../../utils/b-11.jpg (4).svg";
-import about_4 from "../../utils/b-11.jpg (5).svg";
-import about_5 from "../../utils/b-11.jpg (6).svg";
-import about_6 from "../../utils/b-11.jpg (7).svg";
-import about_7 from "../../utils/b-11.jpg (8).svg";
+import about from "../../utils/extra/sittingRoom2.jpg";
+import about_1 from "../../utils/extra/sittingRoom3.jpg";
+import about_2 from "../../utils/extra/sittingRoom4.jpg";
+import about_3 from "../../utils/extra/sittingRoom5.jpg";
+import about_4 from "../../utils/extra/sittingRoom6.jpg";
+import about_5 from "../../utils/extra/sittingRoom7.jpg";
+import about_6 from "../../utils/extra/sittingRoom8.jpg";
+import about_7 from "../../utils/extra/sittingRoom9.jpg";
 
 const AboutUs = () => {
   return (
-    <section className="about-us py-5 bg-white mt-sm-5 pt-sm-5">
+    <section className="about-us py-5 bg-white mt-sm-5 pt-sm-5 overflow-hidden">
       <div className="container mt-5">
         <div className="text-center mb-5">
           <h2 className="fw-bold ">About Us</h2>
@@ -32,7 +32,10 @@ const AboutUs = () => {
         </div>
 
         <div className="row justify-content-center">
-          <div className=" d-sm-grid g-sm-5 row-cols-sm-10">
+          <div
+            className=" d-sm-grid g-sm-5"
+            style={{ gridTemplateColumns: "1fr" }}
+          >
             {/* Who We Are */}
             <div className="mb-5">
               <h3 className="fw-bold">Who We Are</h3>
@@ -52,6 +55,7 @@ const AboutUs = () => {
             <div className="mb-5">
               <h3 className="fw-bold"> What We Do</h3>
               <div className="d-sm-flex flex-sm-row-reverse align-items-sm-center gap-sm-5">
+                <img src={about_3} width="80%" alt="" />
                 <div>
                   <ul className="text-muted px-4">
                     <li>
@@ -76,7 +80,6 @@ const AboutUs = () => {
                     connect people with real, quality options.
                   </p>
                 </div>
-                <img src={about_3} width="80%" alt="" />
               </div>
             </div>
 
@@ -110,11 +113,11 @@ const AboutUs = () => {
             <div className="mb-5">
               <h3 className="fw-bold"> Our Vision</h3>
               <div className="d-sm-flex flex-sm-row-reverse align-items-sm-center">
+                <img src={about_4} width="80%" alt="" />
                 <p className="text-muted px-4">
                   To become Nigeria’s most trusted online housing platform — the
                   first name that comes to mind when it’s time to move.
                 </p>
-                <img src={about_4} width="80%" alt="" />
               </div>
             </div>
 
@@ -132,10 +135,10 @@ const AboutUs = () => {
                 Welcome to Beta House — where better homes begin.
               </p>
               <div
-                className=" d-flex gap-2 position-relative"
+                className=" d-flex gap-2 position-relative last-three"
                 style={{ right: "-10%" }}
               >
-                <img src={about_5} width="15%" className="min-img" alt="" />
+                <img src={about_5} width="25%" className="min-img" alt="" />
                 <img src={about_6} width="45%" alt="" />
                 <img src={about_7} width="30%" alt="" />
               </div>

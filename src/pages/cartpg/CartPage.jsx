@@ -89,7 +89,7 @@ const CartPage = () => {
             <GrShop className="fs-1" />
             <p className="fs-1 mb-0">Cart is Currently Empty {" : ("}</p>
           </div>
-          <Link to="/">
+          <Link to="/properties">
             <button className="continue-btn px-4 py-1 text-white rounded-3 fw-medium fs-6 border-0">
               Continue Browsing Properties.
             </button>
