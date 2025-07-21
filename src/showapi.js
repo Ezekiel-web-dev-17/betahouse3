@@ -234,8 +234,8 @@ const shows = [
     price: "90,000,000",
     amount: 90000000,
     images: [
-      "../src/utils/extra/kitchen14.jpg",
-      "../src/utils/extra/bedroom14.jpg",
+      "../src/utils/extra/kitchen4.jpg",
+      "../src/utils/extra/bathroom10.jpg",
       "../src/utils/extra/sitingRoom1.jpg",
     ],
   },
@@ -252,7 +252,7 @@ const shows = [
     images: [
       "../src/utils/extra/bathroom12.jpg",
       "../src/utils/extra/kitchen14.jpg",
-      "../src/utils/extra/sittingRoom13.jpg.jpg",
+      "../src/utils/extra/sittingRoom13.jpg",
     ],
   },
 ];
