@@ -16,6 +16,7 @@ import { AppContext } from "../../context/StateContext";
 import visac from "../../../src/assets/Visa.png";
 import massterc from "../../../src/assets/MasterCard.png";
 import unionnc from "../../../src/assets/UnionPay.png";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
   const stripe = useStripe();
@@ -70,7 +71,7 @@ const Checkout = () => {
       if (result.error) {
         setError(`Payment failed: ${result.error.message}`);
       } else if (result.paymentIntent.status === "succeeded") {
-        alert("Payment succeeded!");
+        toast.success("Payment Succeeded! 🎊");
         navigate("/properties");
         clearCart();
       }
