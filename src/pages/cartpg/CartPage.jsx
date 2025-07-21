@@ -7,42 +7,18 @@ import { GrShop } from "react-icons/gr";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import { loadStripe } from "@stripe/stripe-js";
-import axios from "axios";
-// import { ApiContext } from "../../context/AxiosContext";
-
-const stripePromise = loadStripe(
-  "pk_test_51RTj9VFjZLLpDs8KHnN2JNxXRcyynMZea3Q6qpxo0ULZkXlFiVcnGKv2ss2SAaYOwyxfOSKJJ4BKXkeB295UuatF006kqUV2ZP"
-); // Your publishable key
-// const  api = useContext(ApiContext)
-const handleCheckout = async (amount, propertyId) => {
-  const stripe = await stripePromise;
-
-  const res = await axios.post(
-    "http://localhost:4000/api/v1/checkout/create-checkout-session",
-    {
-      amount,
-      propertyId,
-    }
-  );
-
-  console.log("res: ", res);
-  console.log("res.data: ", res.data);
-  const session = res.data;
-  await stripe.redirectToCheckout({ sessionId: session.id });
-};
 
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
-  const { cartItems, onRemove, numToString } = useContext(AppContext);
+  const { cartItems, onRemove } = useContext(AppContext);
   const priceCalculator = () => {
     cartItems.map((each) => {
-      setSubTotal((prevTotal) => (prevTotal += Number(each.priceNo) / 2));
+      setSubTotal((prevTotal) => (prevTotal += Number(each.amount) / 2));
     });
   };
 
   const priceOnDelete = (cartItem) => {
-    setSubTotal((prevTotal) => (prevTotal -= Number(cartItem.priceNo)));
+    setSubTotal((prevTotal) => (prevTotal -= Number(cartItem.amount)));
   };
 
   useEffect(() => priceCalculator(), []);
@@ -96,17 +72,16 @@ const CartPage = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center gap-2 m-auto w-100">
             <label className=" fs-5 fw-bold">Subtotal: </label>
-            <h5 className=" fw-semibold mb-0">₦{numToString(subTotal)}</h5>
+            <h5 className=" fw-semibold mb-0">₦{subTotal.toLocaleString()}</h5>
           </div>
-          {/* <Link to="/checkout"> */}
-          <button
-            className="make py-1 px-4 bg-success text-white mt-3 fs-5 fw-bold rounded-3 border-0"
-            style={{ textWrap: "nowrap" }}
-            onClick={() => handleCheckout(10, "1")}
-          >
-            Make Purchase Of All.
-          </button>
-          {/* </Link> */}
+          <Link to="/payment">
+            <button
+              className="make py-1 px-4 bg-success text-white mt-3 fs-5 fw-bold rounded-3 border-0"
+              style={{ textWrap: "nowrap" }}
+            >
+              Make Purchase Of All.
+            </button>
+          </Link>
         </div>
       ) : (
         <div className="empty fw-semibold mt-5 ">

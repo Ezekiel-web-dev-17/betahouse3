@@ -1,34 +1,11 @@
-import demoI from "../../utils/b-11.jpg (4).svg";
-import demoII from "../../utils/b-11.jpg (8).svg";
-import demoIV from "../../utils/extra/15 Ideas for a Minimalist Interior Design at Home.jpg";
+import demoI from "../../utils/extra/kitchen14.jpg";
+import demoII from "../../utils/extra/bedroom13.jpg";
+import demoIV from "../../utils/extra/bathroom14.jpg";
 import shows from "../../showapi.js";
 import "./EachHouse.css";
 import { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AppContext } from "../../context/StateContext";
-import { loadStripe } from "@stripe/stripe-js";
-import axios from "axios";
-// import { ApiContext } from "../../context/AxiosContext";
-
-const stripePromise = loadStripe(
-  "pk_test_51RTj9VFjZLLpDs8KHnN2JNxXRcyynMZea3Q6qpxo0ULZkXlFiVcnGKv2ss2SAaYOwyxfOSKJJ4BKXkeB295UuatF006kqUV2ZP"
-); // Your publishable key
-// const  api = useContext(ApiContext)
-const handleCheckout = async (amount, propertyId) => {
-  const stripe = await stripePromise;
-
-  const res = await axios.post(
-    "http://localhost:4000/api/v1/checkout/create-checkout-session",
-    {
-      amount,
-      propertyId,
-    }
-  );
-
-  const session = res.data;
-  localStorage.setItem("backend:", session.id);
-  stripe.redirectToCheckout({ sessionId: session.id });
-};
 
 const EachHoouse = () => {
   const params = useParams();
@@ -132,7 +109,7 @@ const EachHoouse = () => {
 
           <Link
             className="w-100"
-            to={user !== undefined ? `/house/${params.id}` : "/checkout"}
+            to={user == undefined ? `/house/${params.id}` : "/payment"}
           >
             <button
               className=" rounded border-0 fs-6 py-2 fw-bold text-white w-100"
@@ -141,10 +118,14 @@ const EachHoouse = () => {
                 cursor: disable ? "not-allowed" : "pointer",
               }}
               onClick={() => {
-                if (user == undefined && disable === false) {
-                  alert(`User not logged in`);
-                }
-                handleCheckout(100, `${params.id.slice(1)}`);
+                var propertyObj = shows.find(
+                  (item) => item.id == params.id.slice(1)
+                );
+                setDisable(true);
+                addToCart(propertyObj);
+                // if (user == undefined && disable === false) {
+                //   alert(`User not logged in`);
+                // }
               }}
             >
               {whatFor === "Sale" ? "Buy Property Now." : "Rent Property Now."}

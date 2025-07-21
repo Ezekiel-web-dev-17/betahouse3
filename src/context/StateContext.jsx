@@ -17,25 +17,11 @@ const StateContext = ({ children }) => {
     setCartItems(cartDelete);
   }
 
-  function numToString(num) {
-    const strArr = String(num);
-    let finalStr = "";
-
-    for (let i = 0; i < strArr.length; i++) {
-      if ((strArr.length - i) % 3 === 0) {
-        finalStr += `,${strArr[i]}`;
-      } else {
-        finalStr += strArr[i];
-      }
-    }
-
-    return finalStr.startsWith(",") ? finalStr.slice(1) : finalStr;
+  function clearCart() {
+    return setCartItems([]);
   }
-
   return (
-    <AppContext.Provider
-      value={{ cartItems, addToCart, onRemove, numToString }}
-    >
+    <AppContext.Provider value={{ cartItems, addToCart, onRemove, clearCart }}>
       {children}
     </AppContext.Provider>
   );

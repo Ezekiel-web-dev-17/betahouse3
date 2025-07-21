@@ -109,7 +109,6 @@ const Login = () => {
           text="signin_with"
           onSuccess={async (credentialResponse) => {
             const userInfo = jwtDecode(credentialResponse.credential);
-            console.log("Info:", userInfo);
             const data = {
               email: userInfo.email,
               email_verified: userInfo.email_verified,

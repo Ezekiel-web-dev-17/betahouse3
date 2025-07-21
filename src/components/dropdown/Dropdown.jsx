@@ -30,9 +30,9 @@ const Dropdown = ({ from, shows, showSort, setShowSort, to }) => {
             if (value === "Alphabetical") {
               sorted.sort((a, b) => a.title.localeCompare(b.title));
             } else if (value === "Price: High to Low") {
-              sorted.sort((a, b) => Number(b.priceNo) - Number(a.priceNo));
+              sorted.sort((a, b) => Number(b.amount) - Number(a.amount));
             } else if (value === "Price: Low to High") {
-              sorted.sort((a, b) => Number(a.priceNo) - Number(b.priceNo));
+              sorted.sort((a, b) => Number(a.amount) - Number(b.amount));
             } else if (value === "Default") {
               sorted = shows; // this may need to be passed from parent too
             }

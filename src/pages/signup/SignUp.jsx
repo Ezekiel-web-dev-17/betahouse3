@@ -29,7 +29,6 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     try {
       await api.post("/sign-up", signUpData);
-      console.log("Sign-up successful.");
       navigate("/sign-in");
     } catch (error) {
       setError(
@@ -160,8 +159,6 @@ const SignUp = () => {
             };
             try {
               const res = await api.post("/sign-up", data);
-
-              console.log(res.data.data.user);
 
               const { firstname, lastname, email } = res.data.data.user;
               localStorage.clear();
