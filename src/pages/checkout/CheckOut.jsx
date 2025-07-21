@@ -71,7 +71,12 @@ const Checkout = () => {
       if (result.error) {
         setError(`Payment failed: ${result.error.message}`);
       } else if (result.paymentIntent.status === "succeeded") {
-        toast.success("Payment Succeeded! 🎊");
+        toast.success("Payment Succeeded! 🎊", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: true,
+          theme: "colored",
+        });
         navigate("/properties");
         clearCart();
       }
