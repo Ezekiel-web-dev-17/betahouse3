@@ -10,9 +10,9 @@ import img9 from "./utils/b-11.jpg (7).svg";
 import img10 from "./utils/Contemporary Style House Plan - 3 Beds 2_5 Baths….jpeg";
 import img11 from "./utils/Discover the charm and convenience of prefab homes….jpeg";
 import img12 from "./utils/efb164e4-b0f7-4eca-a366-4e11d834c457.jpeg";
-import img13 from "./utils/f3f9436c-0a9d-473d-8973-1c502af61202.jpeg";
-import img14 from "./utils/Stunning Modern Home Exterior Design Ideas….jpeg";
-import img15 from "./utils/5c12eb96-dde5-42dc-8430-24495d38f367.jpeg";
+import img13 from "./utils/luxury.jpg";
+import img14 from "./utils/3af1446f-99c6-4bea-bb46-ef7d9a94c829.jpg";
+import img15 from "./utils/Black or white_.jpg";
 
 const shows = [
   {
