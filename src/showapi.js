@@ -13,6 +13,48 @@ import img12 from "./utils/efb164e4-b0f7-4eca-a366-4e11d834c457.jpeg";
 import img13 from "./utils/luxury.jpg";
 import img14 from "./utils/3af1446f-99c6-4bea-bb46-ef7d9a94c829.jpg";
 import img15 from "./utils/Black or white_.jpg";
+import kitchen1 from "./utils/extra/kitchen1.jpg";
+import kitchen2 from "./utils/extra/kitchen2.jpg";
+import kitchen3 from "./utils/extra/kitchen3.jpg";
+import kitchen4 from "./utils/extra/kitchen4.jpg";
+import kitchen5 from "./utils/extra/kitchen5.jpg";
+import kitchen6 from "./utils/extra/kitchen6.jpg";
+import kitchen7 from "./utils/extra/kitchen7.jpg";
+import kitchen8 from "./utils/extra/kitchen8.jpg";
+import kitchen9 from "./utils/extra/kitchen9.jpg";
+import kitchen10 from "./utils/extra/kitchen10.jpg";
+import kitchen11 from "./utils/extra/kitchen11.jpg";
+import kitchen12 from "./utils/extra/kitchen12.jpg";
+import kitchen13 from "./utils/extra/kitchen13.jpg";
+import kitchen14 from "./utils/extra/kitchen14.jpg";
+import bathroom1 from "./utils/extra/bathroom1.jpg";
+import bathroom2 from "./utils/extra/bathroom2.jpg";
+import bathroom3 from "./utils/extra/bathroom3.jpg";
+import bathroom4 from "./utils/extra/bathroom4.jpg";
+import bathroom5 from "./utils/extra/bathroom5.jpg";
+import bathroom6 from "./utils/extra/bathroom6.jpg";
+import bathroom7 from "./utils/extra/bathroom7.jpg";
+import bathroom8 from "./utils/extra/bathroom8.jpg";
+import bathroom9 from "./utils/extra/bathroom9.jpg";
+import bathroom10 from "./utils/extra/bathroom10.jpg";
+import bathroom11 from "./utils/extra/bathroom11.jpg";
+import bathroom12 from "./utils/extra/bathroom12.jpg";
+import bathroom13 from "./utils/extra/bathroom13.jpg";
+import bedroom1 from "./utils/extra/bedroom1.jpg";
+import bedroom2 from "./utils/extra/bedroom2.jpg";
+import bedroom3 from "./utils/extra/bedroom3.jpg";
+import bedroom4 from "./utils/extra/bedroom4.jpg";
+import bedroom5 from "./utils/extra/bedroom5.jpg";
+import bedroom6 from "./utils/extra/bedroom6.jpg";
+import bedroom7 from "./utils/extra/bedroom7.jpg";
+import bedroom8 from "./utils/extra/bedroom8.jpg";
+import bedroom9 from "./utils/extra/bedroom9.jpg";
+import bedroom10 from "./utils/extra/bedroom10.jpg";
+import bedroom11 from "./utils/extra/bedroom11.jpg";
+import bedroom12 from "./utils/extra/bedroom12.jpg";
+import bedroom13 from "./utils/extra/bedroom13.jpg";
+import sittingRoom1 from "./utils/extra/sitingRoom1.jpg";
+import sittingRoom13 from "./utils/extra/sittingRoom13.jpg";
 
 const shows = [
   {
@@ -25,11 +67,7 @@ const shows = [
     bath: 3,
     price: "3,340,000",
     amount: 3340000,
-    images: [
-      "../src/utils/extra/kitchen1.jpg",
-      "../src/utils/extra/bedroom1.jpg",
-      "../src/utils/extra/bathroom1.jpg",
-    ],
+    images: [kitchen1, bedroom1, bathroom1],
   },
   {
     id: 2,
@@ -41,11 +79,7 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
-    images: [
-      "../src/utils/extra/kitchen2.jpg",
-      "../src/utils/extra/bedroom2.jpg",
-      "../src/utils/extra/bathroom2.jpg",
-    ],
+    images: [kitchen2, bedroom2, bathroom2],
   },
   {
     id: 3,
@@ -57,11 +91,7 @@ const shows = [
     bath: 3,
     price: "5,350,000",
     amount: 5350000,
-    images: [
-      "../src/utils/extra/kitchen3.jpg",
-      "../src/utils/extra/bedroom3.jpg",
-      "../src/utils/extra/bathroom3.jpg",
-    ],
+    images: [kitchen3, bedroom3, bathroom3],
   },
   {
     id: 4,
@@ -73,11 +103,7 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
-    images: [
-      "../src/utils/extra/kitchen4.jpg",
-      "../src/utils/extra/bedroom4.jpg",
-      "../src/utils/extra/bathroom4.jpg",
-    ],
+    images: [kitchen4, bedroom4, bathroom4],
   },
   {
     id: 5,
@@ -89,11 +115,7 @@ const shows = [
     bath: 4,
     price: "3,500,000",
     amount: 3500000,
-    images: [
-      "../src/utils/extra/kitchen5.jpg",
-      "../src/utils/extra/bedroom5.jpg",
-      "../src/utils/extra/bathroom5.jpg",
-    ],
+    images: [kitchen5, bedroom5, bathroom5],
   },
   {
     id: 6,
@@ -105,11 +127,7 @@ const shows = [
     bath: 3,
     price: "4,000,000",
     amount: 4000000,
-    images: [
-      "../src/utils/extra/kitchen6.jpg",
-      "../src/utils/extra/bedroom6.jpg",
-      "../src/utils/extra/bathroom6.jpg",
-    ],
+    images: [kitchen6, bedroom6, bathroom6],
   },
   {
     id: 7,
@@ -121,11 +139,7 @@ const shows = [
     bath: 3,
     price: "25,000,000",
     amount: 25000000,
-    images: [
-      "../src/utils/extra/kitchen7.jpg",
-      "../src/utils/extra/bedroom7.jpg",
-      "../src/utils/extra/bathroom7.jpg",
-    ],
+    images: [kitchen7, bedroom7, bathroom7],
   },
   {
     id: 8,
@@ -137,11 +151,7 @@ const shows = [
     bath: 6,
     price: "3,350,000",
     amount: 3350000,
-    images: [
-      "../src/utils/extra/kitchen8.jpg",
-      "../src/utils/extra/bedroom8.jpg",
-      "../src/utils/extra/bathroom8.jpg",
-    ],
+    images: [kitchen8, bedroom8, bathroom8],
   },
   {
     id: 9,
@@ -153,11 +163,7 @@ const shows = [
     bath: 6,
     price: "60,000,000",
     amount: 60000000,
-    images: [
-      "../src/utils/extra/kitchen9.jpg",
-      "../src/utils/extra/bedroom9.jpg",
-      "../src/utils/extra/bathroom9.jpg",
-    ],
+    images: [kitchen9, bedroom9, bathroom9],
   },
   {
     id: 10,
@@ -169,11 +175,7 @@ const shows = [
     bath: 3,
     price: "7,000,000",
     amount: 7000000,
-    images: [
-      "../src/utils/extra/kitchen10.jpg",
-      "../src/utils/extra/bedroom10.jpg",
-      "../src/utils/extra/bathroom10.jpg",
-    ],
+    images: [kitchen10, bedroom10, bathroom10],
   },
   {
     id: 11,
@@ -185,11 +187,7 @@ const shows = [
     bath: 3,
     price: "100,000,000",
     amount: 100000000,
-    images: [
-      "../src/utils/extra/kitchen11.jpg",
-      "../src/utils/extra/bedroom11.jpg",
-      "../src/utils/extra/bathroom11.jpg",
-    ],
+    images: [kitchen11, bedroom11, bathroom11],
   },
   {
     id: 12,
@@ -201,11 +199,7 @@ const shows = [
     bath: 3,
     price: "15,000,000",
     amount: 15000000,
-    images: [
-      "../src/utils/extra/kitchen12.jpg",
-      "../src/utils/extra/bedroom12.jpg",
-      "../src/utils/extra/bathroom12.jpg",
-    ],
+    images: [kitchen12, bedroom12, bathroom12],
   },
   {
     id: 13,
@@ -217,11 +211,7 @@ const shows = [
     bath: 4,
     price: "9,000,000",
     amount: 9000000,
-    images: [
-      "../src/utils/extra/kitchen13.jpg",
-      "../src/utils/extra/bedroom13.jpg",
-      "../src/utils/extra/bathroom13.jpg",
-    ],
+    images: [kitchen13, bedroom13, bathroom13],
   },
   {
     id: 14,
@@ -233,11 +223,7 @@ const shows = [
     bath: 3,
     price: "90,000,000",
     amount: 90000000,
-    images: [
-      "../src/utils/extra/kitchen4.jpg",
-      "../src/utils/extra/bathroom10.jpg",
-      "../src/utils/extra/sitingRoom1.jpg",
-    ],
+    images: [kitchen4, bathroom10, sittingRoom1],
   },
   {
     id: 15,
@@ -249,11 +235,7 @@ const shows = [
     bath: 3,
     price: "2,380,000",
     amount: 2380000,
-    images: [
-      "../src/utils/extra/bathroom12.jpg",
-      "../src/utils/extra/kitchen14.jpg",
-      "../src/utils/extra/sittingRoom13.jpg",
-    ],
+    images: [kitchen14, bathroom12, sittingRoom13],
   },
 ];
 
