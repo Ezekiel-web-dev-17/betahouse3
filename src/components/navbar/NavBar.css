@@ -78,7 +78,7 @@ nav ul li a:focus {
   .nav-main::after {
     content: " ";
     position: absolute;
-    top: 12dvh;
+    top: 22dvh;
     right: 15%;
     width: 400px;
     height: 110dvh;

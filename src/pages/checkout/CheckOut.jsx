@@ -27,14 +27,13 @@ const Checkout = () => {
   const [processing, setProcessing] = useState(false);
 
   let total = Array.from(cartItems, (item) => item.amount);
-  const amount =
-    Number(
-      total.length > 1
-        ? total.reduce((acc, price) => {
-            return acc + price;
-          })
-        : total
-    ) / 100;
+  const amount = Number(
+    total.length > 1
+      ? total.reduce((acc, price) => {
+          return acc + price;
+        })
+      : total
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
