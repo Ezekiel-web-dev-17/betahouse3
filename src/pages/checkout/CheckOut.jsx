@@ -173,11 +173,19 @@ const Checkout = () => {
             </div>
             {/* Submit button to place the order */}
             <button
-              className="rounded-3"
+              className="rounded-3 d-flex justify-content-between"
               type="submit"
               disabled={processing || !stripe}
             >
-              {processing ? "Processing..." : "Pay Now."}
+              <strong role="status">
+                {" "}
+                {processing ? "Processing..." : "Pay Now."}
+              </strong>
+              <div
+                class="spinner-border ms-auto"
+                style={{ display: `${processing ? "block" : "none"}` }}
+                aria-hidden="true"
+              ></div>
             </button>
           </div>
         </form>

@@ -14,6 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [logInData, setLoginInData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setLoginInData({ ...logInData, [e.target.name]: e.target.value });
@@ -21,6 +22,7 @@ const Login = () => {
 
   const handleSubmit = async () => {
     try {
+      setLoading(true);
       const res = await api.post("/sign-in", logInData);
       const { firstname, lastname, email } = res.data.data.user;
       localStorage.clear;
@@ -28,6 +30,7 @@ const Login = () => {
       localStorage.setItem("lastName", lastname);
       localStorage.setItem("userEmail", email);
       localStorage.setItem("token", res.data.data.token);
+      setLoading(false);
       navigate("/");
     } catch (e) {
       setError(e.response || "Something went wrong. Please try again later.");
@@ -91,11 +94,19 @@ const Login = () => {
           </div>
 
           <button
-            type="submit"
-            className=" rounded-4 py-sm-3 py-2 border-0 text-white fs-5"
+            className=" rounded-4 py-sm-3 py-2 border-0 text-white fs-5 btn btn-primary"
             style={{ backgroundColor: "#3d9970" }}
+            type="submit"
           >
-            Sign in
+            <span role="status">
+              {" "}
+              <span
+                className="spinner-border spinner-border-sm"
+                aria-hidden="true"
+                style={{ display: `${loading ? "inline-block" : "none"}` }}
+              ></span>{" "}
+              Sign In
+            </span>
           </button>
         </form>
 

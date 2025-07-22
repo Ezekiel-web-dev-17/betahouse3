@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing uuid for generating random pas
 const SignUp = () => {
   const api = useContext(ApiContext);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [signUpData, setSignUpData] = useState({
     firstname: "",
     lastname: "",
@@ -28,7 +29,9 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     try {
+      setLoading(true);
       await api.post("/sign-up", signUpData);
+      setLoading(false);
       navigate("/sign-in");
     } catch (error) {
       setError(
@@ -59,7 +62,7 @@ const SignUp = () => {
             Join our community of home seekers and explore the possibilities
             that await.
           </h3>
-          <p className=" text-danger fs-5">{error}</p>
+          <p className=" text-danger fs-5 bg-black px-2">{error}</p>
           <p className="mb-3 fw-medium text-black-75">
             Lets get started by filling out the information below
           </p>
@@ -133,12 +136,27 @@ const SignUp = () => {
             </p>
           </div>
 
-          <button
+          {/* <button
             type="submit"
             className=" rounded-4 py-3 border-0 text-white fs-5"
             style={{ backgroundColor: "#3d9970" }}
           >
             Sign up
+          </button> */}
+          <button
+            className="rounded-4 py-3 border-0 text-white fs-5 btn btn-primary"
+            style={{ backgroundColor: "#3d9970" }}
+            type="submit"
+          >
+            <span role="status">
+              {" "}
+              <span
+                className="spinner-border spinner-border-sm"
+                aria-hidden="true"
+                style={{ display: `${loading ? "inline-block" : "none"}` }}
+              ></span>{" "}
+              Sign Up
+            </span>
           </button>
         </form>
 
