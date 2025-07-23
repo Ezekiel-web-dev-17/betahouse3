@@ -1,0 +1,9 @@
+header input:focus {
+  outline: 3px solid #3d99702f;
+}
+
+header img:active {
+  background-color: #59c996;
+  background-clip: border-box;
+  border-radius: 50%;
+}

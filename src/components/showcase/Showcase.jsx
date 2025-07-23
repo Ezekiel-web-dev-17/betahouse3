@@ -59,7 +59,7 @@ const Showcase = ({ currentPage }) => {
       {currentPage === "Home" ? (
         <div>
           <h3 className="fw-bold" style={{ color: "#3d9970" }}>
-            Our Properties
+            Affordable Properties
           </h3>
         </div>
       ) : (

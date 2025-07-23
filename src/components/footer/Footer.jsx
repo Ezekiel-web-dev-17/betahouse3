@@ -68,6 +68,14 @@ const Footer = () => {
                   Blog
                 </li>
               </Link>
+              <Link className="text-decoration-none text-white" to="/faqs">
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  FAQ's
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="more mb-sm-0 mb-5">
@@ -85,14 +93,6 @@ const Footer = () => {
               >
                 Affordable Houses
               </li>
-              <Link className="text-decoration-none text-white" to="/faqs">
-                <li
-                  style={{ fontSize: "14px" }}
-                  className="list-unstyled  text-white"
-                >
-                  FAQ's
-                </li>
-              </Link>
             </ul>
           </div>
           <div className="">

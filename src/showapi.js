@@ -68,6 +68,7 @@ const shows = [
     price: "3,340,000",
     amount: 3340000,
     images: [kitchen1, bedroom1, bathroom1],
+    propertyType: "Duplex",
   },
   {
     id: 2,
@@ -80,6 +81,7 @@ const shows = [
     price: "4,000,000",
     amount: 4000000,
     images: [kitchen2, bedroom2, bathroom2],
+    propertyType: "Bedroom Flat",
   },
   {
     id: 3,
@@ -92,6 +94,7 @@ const shows = [
     price: "5,350,000",
     amount: 5350000,
     images: [kitchen3, bedroom3, bathroom3],
+    propertyType: "Storey",
   },
   {
     id: 4,
@@ -104,6 +107,7 @@ const shows = [
     price: "4,000,000",
     amount: 4000000,
     images: [kitchen4, bedroom4, bathroom4],
+    propertyType: "Storey",
   },
   {
     id: 5,
@@ -116,6 +120,7 @@ const shows = [
     price: "3,500,000",
     amount: 3500000,
     images: [kitchen5, bedroom5, bathroom5],
+    propertyType: "Duplex",
   },
   {
     id: 6,
@@ -128,6 +133,7 @@ const shows = [
     price: "4,000,000",
     amount: 4000000,
     images: [kitchen6, bedroom6, bathroom6],
+    propertyType: "Storey",
   },
   {
     id: 7,
@@ -140,6 +146,7 @@ const shows = [
     price: "25,000,000",
     amount: 25000000,
     images: [kitchen7, bedroom7, bathroom7],
+    propertyType: "Storey",
   },
   {
     id: 8,
@@ -152,6 +159,7 @@ const shows = [
     price: "3,350,000",
     amount: 3350000,
     images: [kitchen8, bedroom8, bathroom8],
+    propertyType: "Duplex",
   },
   {
     id: 9,
@@ -164,6 +172,7 @@ const shows = [
     price: "60,000,000",
     amount: 60000000,
     images: [kitchen9, bedroom9, bathroom9],
+    propertyType: "Storey",
   },
   {
     id: 10,
@@ -176,6 +185,7 @@ const shows = [
     price: "7,000,000",
     amount: 7000000,
     images: [kitchen10, bedroom10, bathroom10],
+    propertyType: "Storey",
   },
   {
     id: 11,
@@ -188,6 +198,7 @@ const shows = [
     price: "100,000,000",
     amount: 100000000,
     images: [kitchen11, bedroom11, bathroom11],
+    propertyType: "Bungalow",
   },
   {
     id: 12,
@@ -200,6 +211,7 @@ const shows = [
     price: "15,000,000",
     amount: 15000000,
     images: [kitchen12, bedroom12, bathroom12],
+    propertyType: "Storey",
   },
   {
     id: 13,
@@ -212,6 +224,7 @@ const shows = [
     price: "9,000,000",
     amount: 9000000,
     images: [kitchen13, bedroom13, bathroom13],
+    propertyType: "Storey",
   },
   {
     id: 14,
@@ -224,6 +237,7 @@ const shows = [
     price: "90,000,000",
     amount: 90000000,
     images: [kitchen4, bathroom10, sittingRoom1],
+    propertyType: "Storey",
   },
   {
     id: 15,
@@ -236,6 +250,7 @@ const shows = [
     price: "2,380,000",
     amount: 2380000,
     images: [kitchen14, bathroom12, sittingRoom13],
+    propertyType: "Storey",
   },
 ];
 
