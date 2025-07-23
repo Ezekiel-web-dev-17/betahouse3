@@ -11,12 +11,10 @@ const Header = () => {
     locationName: "",
     propertyType: "",
   });
-  const [searching, setSearching] = useState(false);
 
   function onInputChange(e) {
     e.preventDefault();
     setLocateContent({ ...locateContent, [e.target.name]: e.target.value });
-    setSearching(true);
   }
 
   const searchedProperty = shows.filter(
@@ -25,28 +23,6 @@ const Header = () => {
       property.propertyType.includes(locateContent.propertyType) &&
       property.bed === noOfBedrooms
   );
-
-  useEffect(() => {
-    console.log(searchedProperty);
-    setSearching(true);
-    const ul = document.querySelector(".property-list");
-
-    searchedProperty.forEach((property) => {
-      const a = document.createElement("a");
-      const li = document.createElement("li");
-      a.style.color = "#3d9970";
-      li.style.listStyle = "none";
-      a.style.borderBlockEnd = "1px solid #9f9f9f";
-      a.style.textDecoration = "none";
-      if (searchedProperty.length >= 1) {
-        a.textContent = `${property?.title}`;
-        a.href = `/house/:${property?.id}`;
-        li.appendChild(a);
-        ul.append(li);
-        console.log(ul);
-      }
-    });
-  }, [locateContent, noOfBedrooms]);
 
   return (
     <header className=" d-flex flex-column align-items-center justify-content-center gap-5">
@@ -116,20 +92,6 @@ const Header = () => {
           </div>
         </div>
         <button className="border-0 find-prop text-white">Find Property</button>
-        {searching &&
-          (locateContent.locationName ||
-            locateContent.propertyType ||
-            noOfBedrooms > 1) && (
-            <div
-              className="search bg-white bg-opacity-100 w-100 start-0 position-absolute shadow py-2 rounded-3 overflow-y-scroll border-1 border-success"
-              style={{
-                marginTop: `${window.innerWidth <= 390 ? "330px" : "200px"}`,
-                maxHeight: "100px",
-              }}
-            >
-              <ul className="property-list text-success fw-bold text-start px-1 px-sm-3"></ul>
-            </div>
-          )}
       </section>
     </header>
   );

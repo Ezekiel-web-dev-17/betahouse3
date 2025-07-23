@@ -16,6 +16,11 @@ import Checkout from "./pages/checkout/CheckOut.jsx";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Faq from "./pages/faq/Faq.jsx";
+import RealHouse from "./pages/categories/real-house/RealHouse.jsx";
+import InfiniteBliss from "./pages/categories/infinite-bliss/InfiniteBliss.jsx";
+import ExquisiteHaven from "./pages/categories/exquisite-haven/ExquisiteHaven.jsx";
+import LuxePalatial from "./pages/categories/luxe-palatial/LuxePalatial.jsx";
+import HarmonyLuxury from "./pages/categories/harmony-luxury/HarmonyLuxury.jsx";
 
 function App() {
   return (
@@ -33,6 +38,14 @@ function App() {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/faqs" element={<Faq />} />
               <Route path="/payment" element={<Checkout />} />
+              <Route path="/Harmony-Luxury-Villa" element={<HarmonyLuxury />} />
+              <Route path="/Luxe-Palatial-Villa" element={<LuxePalatial />} />
+              <Route
+                path="/Exquisite-Haven-Villa"
+                element={<ExquisiteHaven />}
+              />
+              <Route path="/Infinite-Bliss-Villa" element={<InfiniteBliss />} />
+              <Route path="/Real-House-Luxury-Villa" element={<RealHouse />} />
             </Route>
             <Route element={<AuthLayout />}>
               <Route path="/sign-in" element={<Login />} />

@@ -157,7 +157,7 @@ const Showcase = ({ currentPage }) => {
                     <div className=" w-100 d-flex justify-content-between align-items-center border-top border-dark-subtle border-1 mt-3 pt-4">
                       <h4 className="mb-0">
                         ₦ {show.price}
-                        {i % 2 === 0 ? "/1 yr" : ""}
+                        {show.whatFor === "Rent" ? "/yr" : ""}
                       </h4>
                       <img src={arrowToFro} alt="" />
                       <BsShare />
@@ -243,7 +243,10 @@ const Showcase = ({ currentPage }) => {
                     </div>
 
                     <div className=" w-100 d-flex justify-content-between align-items-center border-top border-dark-subtle border-1 mt-3 pt-4">
-                      <h4 className="mb-0">₦ {show.price}</h4>
+                      <h4 className="mb-0">
+                        ₦ {show.price}
+                        {show.whatFor === "Rent" ? "/yr" : ""}
+                      </h4>
                       <img src={arrowToFro} alt="" />
                       <BsShare />
                       <BsHeart />

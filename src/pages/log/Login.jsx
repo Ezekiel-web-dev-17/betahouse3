@@ -33,8 +33,9 @@ const Login = () => {
       setLoading(false);
       navigate("/");
     } catch (e) {
+      setLoading(false);
       setError(e.response || "Something went wrong. Please try again later.");
-      console.error("Error during sign-up:", e);
+      console.error("Error during sign-up:", e.message);
     }
   };
 

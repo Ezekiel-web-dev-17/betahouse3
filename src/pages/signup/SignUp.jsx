@@ -34,6 +34,7 @@ const SignUp = () => {
       setLoading(false);
       navigate("/sign-in");
     } catch (error) {
+      setLoading(false);
       setError(
         error.response?.data?.message ||
           "Something went wrong. Please try again later."

@@ -5,28 +5,22 @@ import {
   BsArrowRightCircle,
   BsFillGeoAltFill,
 } from "react-icons/bs";
-import semi from "../../utils/Link.svg";
-import special from "../../utils/Link (1).svg";
-import split from "../../utils/Link (2).svg";
-import twin from "../../utils/Link (3).svg";
-import otherI from "../../utils/5c12eb96-dde5-42dc-8430-24495d38f367.jpeg";
-import otherII from "../../utils/f3f9436c-0a9d-473d-8973-1c502af61202.jpeg";
-import otherIII from "../../utils/efb164e4-b0f7-4eca-a366-4e11d834c457.jpeg";
 import line from "../../utils/Line 7.svg";
 import Showcase from "../../components/showcase/Showcase.jsx";
 import Header from "../../components/header/Header.jsx";
+import shows from "../../showapi.js";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
 
   const cards = [
-    { src: semi },
-    { src: special },
-    { src: split },
-    { src: twin },
-    { src: otherI, title: "Lakeside Bungalow", price: "₦200,000,000" },
-    { src: otherII, title: "Glass Storey", price: "₦360,000,000" },
-    { src: otherIII, title: "3 Floor Storey", price: "₦320,000,000" },
+    shows[14],
+    shows[13],
+    shows[12],
+    shows[11],
+    shows[10],
+    shows[9],
   ];
 
   const cardWidth = 300; //Includes image width + gap
@@ -74,7 +68,7 @@ const Homepage = () => {
               style={{ width: "92%", margin: "0 auto" }}
             >
               <div
-                className="d-flex gap-3"
+                className="d-flex gap-sm-3 gap-2"
                 style={{
                   transform: `translateX(-${scrollIndex * cardWidth}px)`,
                   transition: "transform 0.7s ease-in-out",
@@ -82,53 +76,55 @@ const Homepage = () => {
                 }}
               >
                 {cards.map((card, i) => (
-                  <div
-                    key={i}
-                    className={`position-relative ${
-                      i >= 4 ? "small-screen" : ""
-                    }`}
-                  >
-                    <img
-                      src={card.src}
-                      width="290px"
-                      height="412px"
-                      className="rounded-3"
-                      alt=""
-                    />
-                    {card.title && (
-                      <div
-                        className="more-details d-flex flex-column align-items-start position-absolute bg-black bg-opacity-25 gap-2 p-3 w-100 rounded-bottom-3"
-                        style={{
-                          bottom: "0px",
-                          color: "white",
-                          left: "0px",
-                          fontFamily: "Outfit",
-                        }}
-                      >
-                        <h6>{card.title}</h6>
-                        <h6 className="mb-0">{card.price}</h6>
-                        <div className=" d-flex flex-row align-items-center gap-2">
-                          <p className="mb-0" style={{ fontSize: "13px" }}>
-                            6 Bed
-                          </p>
-                          <img src={line} width="5px" height="14px" alt="" />
-                          <p className="mb-0" style={{ fontSize: "13px" }}>
-                            3 Bath
-                          </p>
-                          <img src={line} width="5px" height="14px" alt="" />
-                          <p className="mb-0" style={{ fontSize: "13px" }}>
-                            720sqft
-                          </p>
+                  <Link to={`/house/:${card?.id}`}>
+                    <div
+                      key={i}
+                      className={`position-relative ${
+                        i <= 2 ? "small-screen" : ""
+                      }`}
+                    >
+                      <img
+                        src={card?.image}
+                        width="290px"
+                        height="412px"
+                        className="rounded-3"
+                        alt=""
+                      />
+                      {card?.title && (
+                        <div
+                          className="more-details d-flex flex-column align-items-start position-absolute bg-black bg-opacity-25 gap-2 p-3 w-100 rounded-bottom-3"
+                          style={{
+                            bottom: "0px",
+                            color: "white",
+                            left: "0px",
+                            fontFamily: "Outfit",
+                          }}
+                        >
+                          <h6>{card.title}</h6>
+                          <h6 className="mb-0">₦{card?.price}</h6>
+                          <div className=" d-flex flex-row align-items-center gap-2">
+                            <p className="mb-0" style={{ fontSize: "13px" }}>
+                              {card?.bed} Bed
+                            </p>
+                            <img src={line} width="5px" height="14px" alt="" />
+                            <p className="mb-0" style={{ fontSize: "13px" }}>
+                              {card?.bath} Bath
+                            </p>
+                            <img src={line} width="5px" height="14px" alt="" />
+                            <p className="mb-0" style={{ fontSize: "13px" }}>
+                              720sqft
+                            </p>
+                          </div>
+                          <div className="img-location d-flex gap-2 align-items-center">
+                            <BsFillGeoAltFill />
+                            <p className=" mb-0" style={{ fontSize: "13px" }}>
+                              Victoria Island, Lagos
+                            </p>
+                          </div>
                         </div>
-                        <div className="img-location d-flex gap-2 align-items-center">
-                          <BsFillGeoAltFill />
-                          <p className=" mb-0" style={{ fontSize: "13px" }}>
-                            Victoria Island, Lagos
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>

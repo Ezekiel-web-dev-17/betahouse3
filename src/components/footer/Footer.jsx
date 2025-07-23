@@ -79,20 +79,63 @@ const Footer = () => {
             </ul>
           </div>
           <div className="more mb-sm-0 mb-5">
-            <h5 className="mb-4 fw-semi-bold text-white">More</h5>
+            <h5 className="mb-4 fw-semi-bold text-white">Categories</h5>
             <ul className="ps-0 mb-0 d-flex flex-column gap-4">
-              <li
-                style={{ fontSize: "14px" }}
-                className="list-unstyled  text-white"
+              <Link
+                className="text-decoration-none text-white"
+                to="/Real-House-Luxury-Villa"
               >
-                Agents
-              </li>
-              <li
-                style={{ fontSize: "14px" }}
-                className="list-unstyled  text-white"
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Real House Luxury Villa
+                </li>
+              </Link>
+              <Link
+                className="text-decoration-none text-white"
+                to="/Harmony-Luxury-Villa"
               >
-                Affordable Houses
-              </li>
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Harmony Luxury Villa
+                </li>
+              </Link>
+              <Link
+                className="text-decoration-none text-white"
+                to="/Luxe-Palatial-Villa"
+              >
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Luxe Palatial Villa
+                </li>
+              </Link>
+              <Link
+                className="text-decoration-none text-white"
+                to="/Exquisite-Haven-Villa"
+              >
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Exquisite Haven Villa
+                </li>
+              </Link>
+              <Link
+                className="text-decoration-none text-white"
+                to="/Infinite-Bliss-Villa"
+              >
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Infinite Bliss Villa
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="">
@@ -116,12 +159,15 @@ const Footer = () => {
               >
                 3 bedroom flat
               </li>
-              <li
-                style={{ fontSize: "14px" }}
-                className="list-unstyled  text-white"
-              >
-                Bungalow
-              </li>
+              <Link to="/house/:11" className="text-decoration-none text-white">
+                {" "}
+                <li
+                  style={{ fontSize: "14px" }}
+                  className="list-unstyled  text-white"
+                >
+                  Bungalow
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
