@@ -205,7 +205,7 @@ const shows = [
     image: img12,
     whatFor: "Rent",
     title: "Real House Luxury Villa",
-    location: "Gbadaga, Lagos",
+    location: "Gbagada, Lagos",
     bed: 4,
     bath: 3,
     price: "15,000,000",
@@ -237,7 +237,7 @@ const shows = [
     price: "90,000,000",
     amount: 90000000,
     images: [kitchen4, bathroom10, sittingRoom1],
-    propertyType: "Storey",
+    propertyType: "Duplex",
   },
   {
     id: 15,

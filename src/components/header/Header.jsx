@@ -1,9 +1,10 @@
 import minus from "../../utils/span.bedroom-count-btn.svg";
 import plus from "../../utils/span.bedroom-count-btn (1).svg";
 import line from "../../utils/Line 7.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import shows from "../../showapi.js";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [noOfBedrooms, setNoOfBedrooms] = useState(1);
@@ -11,18 +12,27 @@ const Header = () => {
     locationName: "",
     propertyType: "",
   });
+  const find = useNavigate();
 
   function onInputChange(e) {
     e.preventDefault();
     setLocateContent({ ...locateContent, [e.target.name]: e.target.value });
   }
 
-  const searchedProperty = shows.filter(
-    (property) =>
-      property.location.includes(locateContent.locationName) &&
-      property.propertyType.includes(locateContent.propertyType) &&
-      property.bed === noOfBedrooms
-  );
+  const searchedProperty =
+    locateContent.locationName || locateContent.propertyType
+      ? shows.find(
+          (property) =>
+            property.location.includes(locateContent.locationName) &&
+            property.propertyType.includes(locateContent.propertyType)
+        )
+      : [];
+
+  function findProperty() {
+    find(
+      `/search/:${searchedProperty?.location}/:${searchedProperty?.propertyType}`
+    );
+  }
 
   return (
     <header className=" d-flex flex-column align-items-center justify-content-center gap-5">
@@ -91,7 +101,12 @@ const Header = () => {
             />
           </div>
         </div>
-        <button className="border-0 find-prop text-white">Find Property</button>
+        <button
+          className="border-0 find-prop text-white"
+          onClick={findProperty}
+        >
+          Find Property
+        </button>
       </section>
     </header>
   );

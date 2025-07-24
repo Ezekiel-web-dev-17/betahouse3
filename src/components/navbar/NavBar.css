@@ -5,6 +5,7 @@
 nav {
   height: 121px;
   background-color: #1d293f1f;
+  backdrop-filter: blur(4.5px);
   padding-inline: 100px;
   z-index: 3;
 }

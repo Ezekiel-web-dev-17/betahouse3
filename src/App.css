@@ -12,3 +12,17 @@
 h1 {
   color: #181a20;
 }
+
+.categories {
+  width: 80%;
+  place-content: center;
+  margin-inline-start: 10%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+}
+
+@media (max-width: 390px) {
+  .categories {
+    gap: 0;
+  }
+}

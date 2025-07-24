@@ -21,6 +21,7 @@ import InfiniteBliss from "./pages/categories/infinite-bliss/InfiniteBliss.jsx";
 import ExquisiteHaven from "./pages/categories/exquisite-haven/ExquisiteHaven.jsx";
 import LuxePalatial from "./pages/categories/luxe-palatial/LuxePalatial.jsx";
 import HarmonyLuxury from "./pages/categories/harmony-luxury/HarmonyLuxury.jsx";
+import FindProperty from "./pages/findProperty/FindProperty.jsx";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/faqs" element={<Faq />} />
               <Route path="/payment" element={<Checkout />} />
+              <Route
+                path="/search/:location/:propertytype"
+                element={<FindProperty />}
+              />
               <Route path="/Harmony-Luxury-Villa" element={<HarmonyLuxury />} />
               <Route path="/Luxe-Palatial-Villa" element={<LuxePalatial />} />
               <Route
