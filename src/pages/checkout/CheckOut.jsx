@@ -80,6 +80,9 @@ const Checkout = () => {
         clearCart();
       }
     } catch (err) {
+      toast.info(
+        "Check your Internet connection. If error persists try logging out and sign-in again"
+      );
       console.error("Checkout error:", err);
       setError(
         err.response?.data?.message ||

@@ -13,7 +13,9 @@ import { useEffect, useState } from "react";
 const NavBar = () => {
   const firstname = localStorage.getItem("firstName");
   const lastname = localStorage.getItem("lastName");
-  const [profileDrop, setProfileDrop] = useState(true);
+  const [profileDrop, setProfileDrop] = useState(
+    window.innerWidth < 400 ? true : false
+  );
   useEffect(() => {
     const close = document.querySelector("#close");
     const menu = document.querySelector(".menu");
